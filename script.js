@@ -15,6 +15,7 @@ document.getElementById('add-btn').addEventListener('click', function() {
 
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove';
+        removeBtn.className = 'remove-btn';
         removeBtn.addEventListener('click', function() {
             li.remove();
         });
