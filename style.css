@@ -1,32 +1,39 @@
-body {
+    body {
             font-family: Arial, sans-serif;
+            font-size: larger;
+            background-color: rgb(97, 145, 145);
             margin: 20px;
         }
         .todo-container {
             max-width: 400px;
-            margin: 0 auto;
+            margin: auto;
         }
+
         ul {
             list-style-type: none;
-            padding: 0;
+            padding: 10px;
         }
+
         .done {
             text-decoration: line-through;
-            color: gray;
+            border: 3px solid;
+            color: rgb(0, 0, 0);
         }
+
         .not-done {
             text-decoration: none;
             color: black;
         }
+
         .not-done::before {
-            content: "- "; /* Dash symbol */
             color: black; /* Keep the dash color consistent */
         }
+
         li {
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 3px solid #000000;
             margin-bottom: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
+        } 
