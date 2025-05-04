@@ -10,6 +10,18 @@ body {
             list-style-type: none;
             padding: 0;
         }
+        .done {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .not-done {
+            text-decoration: none;
+            color: black;
+        }
+        .not-done::before {
+            content: "- "; /* Dash symbol */
+            color: black; /* Keep the dash color consistent */
+        }
         li {
             padding: 10px;
             border: 1px solid #ccc;
@@ -17,11 +29,4 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        .remove-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
         }

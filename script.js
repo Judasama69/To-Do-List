@@ -1,22 +1,28 @@
-        const addButton = document.getElementById('add-btn');
-        const inputField = document.getElementById('todo-input');
-        const todoList = document.getElementById('todo-list');
+document.getElementById('add-btn').addEventListener('click', function() {
+    const input = document.getElementById('todo-input');
+    const taskText = input.value.trim();
+    if (taskText) {
+        const li = document.createElement('li');
 
-        addButton.addEventListener('click', () => {
-            const task = inputField.value.trim();
-            if (task) {
-                const listItem = document.createElement('li');
-                listItem.textContent = task;
-
-                const removeButton = document.createElement('button');
-                removeButton.textContent = 'Remove';
-                removeButton.classList.add('remove-btn');
-                removeButton.addEventListener('click', () => {
-                    todoList.removeChild(listItem);
-                });
-
-                listItem.appendChild(removeButton);
-                todoList.appendChild(listItem);
-                inputField.value = '';
-            }
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('change', function() {
+            li.classList.toggle('done');
         });
+
+        const taskTextSpan = document.createElement('span');
+        taskTextSpan.textContent = taskText;
+
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.addEventListener('click', function() {
+            li.remove();
+        });
+
+        li.appendChild(checkbox);
+        li.appendChild(taskTextSpan);
+        li.appendChild(removeBtn);
+        document.getElementById('todo-list').appendChild(li);
+        input.value = '';
+    }
+});
