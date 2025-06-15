@@ -44,3 +44,18 @@ li {
 .remove-btn:hover {
     background-color: darkred;
 }
+
+#todo-input {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-btn{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+}
